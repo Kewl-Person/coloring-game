@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloring Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Use your imagination!</h1>
+
+        <!-- Display current color being used -->
+        <div id="current-color">
+            <h3>Current Color: <span id="color-name">Red</span></h3>
+        </div>
+
+        <div id="color-box">
+            <h3>Colors</h3>
+            <div id="colors">
+                <button class="color" style="background-color:red;" onclick="selectColor('red')"></button>
+                <button class="color" style="background-color:orange;" onclick="selectColor('orange')"></button>
+                <button class="color" style="background-color:yellow;" onclick="selectColor('yellow')"></button>
+                <button class="color" style="background-color:green;" onclick="selectColor('green')"></button>
+                <button class="color" style="background-color:blue;" onclick="selectColor('blue')"></button>
+                <button class="color" style="background-color:indigo;" onclick="selectColor('indigo')"></button>
+                <button class="color" style="background-color:violet;" onclick="selectColor('violet')"></button>
+                <button class="color" style="background-color:lightpink;" onclick="selectColor('lightpink')"></button>
+                <button class="color" style="background-color:black;" onclick="selectColor('black')"></button>
+                <button class="color" style="background-color:white;" onclick="selectColor('white')"></button>
+                <button class="color" style="background-color:grey;" onclick="selectColor('grey')"></button>
+                <button class="color" style="background-color:brown;" onclick="selectColor('brown')"></button>
+                <button class="color" style="background-color:lightcoral;" onclick="selectColor('lightred')"></button>
+                <button class="color" style="background-color:lightsalmon;" onclick="selectColor('lightorange')"></button>
+                <button class="color" style="background-color:lightyellow;" onclick="selectColor('lightyellow')"></button>
+                <button class="color" style="background-color:lightgreen;" onclick="selectColor('lightgreen')"></button>
+                <button class="color" style="background-color:lightblue;" onclick="selectColor('lightblue')"></button>
+            </div>
+            <button id="eraser-btn" onclick="toggleEraser()">Eraser</button>
+        </div>
+
+        <div id="page-container">
+            <button id="prev-page" onclick="changePage(-1)">&#8592;</button>
+            <div id="page-content">
+                <canvas id="coloringCanvas" width="1000" height="1000"></canvas>
+            </div>
+            <button id="next-page" onclick="changePage(1)">&#8594;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
